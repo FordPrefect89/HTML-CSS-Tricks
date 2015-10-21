@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iFrame Test Page</title>
+		<style>
+			
+			#outerdiv
+			{
+				position:absolute; 
+				left:5px; 
+				bottom:5px; 
+				width:400px;	/* set this equal to myFrame width x scale*/
+				height:110px; /* set this equal to myFrame height x scale */
+				overflow:hidden;
+				outline:1px solid red; /* comment this out after you've got the iframe looking the way you want */
+			}
+			
+			#myFrame 
+			{
+				width:1002px; /* adjust this to set the rightmost edge of the page you want in the frame */
+				height:882px;	/* adjust this to set the bottommost edge of the page you want in the frame */
+				
+				zoom: 1; /* leave this alone and use scale to control zoom */
+				-moz-transform: scale(0.666); /* set all scale values identically */
+				-moz-transform-origin: -300px -325px; /* use these x and y values to move myFrame within outerdiv to crop the left and top edges */
+				-o-transform: scale(0.666);
+				-o-transform-origin: -300px -325px;  /* set all origin values identically */
+				-webkit-transform: scale(0.666);
+				-webkit-transform-origin: -300px -325px;
+				transform:scale(0.666);
+				transform-origin: -300px -325px;
+			}
+		</style>
+	</head>
+	<body>
+        <div id="outerdiv">
+            <iframe src="URL for frame" id="myFrame" scrolling="no" >
+            </iframe>
+        </div>
+    </body>
+</html>
