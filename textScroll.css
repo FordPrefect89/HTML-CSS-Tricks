@@ -1,0 +1,72 @@
+.textScrollUp /* Use this class to scroll text up from bottom of selection */
+{
+    /* Starting Positions */
+    -moz-transform:translateY(100%);
+    -webkit-transform:translateY(100%);	
+    transform:translateY(100%);
+    /* Animate */
+    -moz-animation: textScrollUp 15s linear infinite;
+    -webkit-animation: textScrollUp 15s linear infinite;
+    animation: textScrollUp 15s linear infinite;
+}
+.textScrollDown /* Use this class to scroll text down from top of selection */
+{
+    /* Starting Positions */
+    -moz-transform:translateY(-100%);
+    -webkit-transform:translateY(-100%);	
+    transform:translateY(-100%);
+    /* Animate */
+    -moz-animation: textScrollDown 15s linear infinite;
+    -webkit-animation: textScrollDown 15s linear infinite;
+    animation: textScrollDown 15s linear infinite;
+}
+@-moz-keyframes textScrollUp
+{
+    0%   { -moz-transform: translateY(100%); }
+    100% { -moz-transform: translateY(-100%); }
+}
+@-webkit-keyframes textScrollUp
+{
+    0%   { -webkit-transform: translateY(100%); }
+    100% { -webkit-transform: translateY(-100%); }
+}
+@keyframes textScrollUp
+{
+    0%
+    {
+        -moz-transform: translateY(100%); /* Firefox bug fix */
+        -webkit-transform: translateY(100%); /* Firefox bug fix */
+        transform: translateY(100%);
+    }
+
+    100%
+    {
+        -moz-transform: translateY(-100%); /* Firefox bug fix */
+        -webkit-transform: translateY(-100%); /* Firefox bug fix */
+    }
+}
+@-moz-keyframes textScrollDown
+{
+    0%   { -moz-transform: translateY(-100%); }
+    100% { -moz-transform: translateY(100%); }
+}
+@-webkit-keyframes textScrollDown
+{
+    0%   { -webkit-transform: translateY(-100%); }
+    100% { -webkit-transform: translateY(100%); }
+}
+@keyframes textScrollDown
+{
+    0%
+    {
+        -moz-transform: translateY(-100%); /* Firefox bug fix */
+        -webkit-transform: translateY(-100%); /* Firefox bug fix */
+        transform: translateY(-100%);
+    }
+
+    100%
+    {
+        -moz-transform: translateY(100%); /* Firefox bug fix */
+        -webkit-transform: translateY(100%); /* Firefox bug fix */
+    }
+}
